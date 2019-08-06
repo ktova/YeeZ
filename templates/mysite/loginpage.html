@@ -1,0 +1,41 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Yeezus Casino</title>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href="/static/home.css" type='text/css'/>
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+    <style type="text/css">
+    html,
+    body {
+        height: 100%
+    }
+    </style>
+</head>
+
+<body class="body">
+<div>
+    {% block content %}
+    <div id="toplogo" class="flexcen">
+    <img src="/static/yeezlog.png">
+    </div>
+
+    <!-- Starting form -->
+
+    <div class="flexcen">
+        <form method="POST" class="logform">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="submitbtn" type="submit" value="Enter" onclick="window.location.href='http://127.0.0.1:8000/roulette/'"/>
+         </form>
+    </div>
+</div>    
+
+{% endblock %}
+
+</body> 
+
+</html>

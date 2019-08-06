@@ -1,0 +1,276 @@
+body {
+width:100%;
+height:75%;
+background-image: url(/static/bgsign.jpg);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+/* toggled content */
+
+
+
+/**/
+
+.flexcen {
+    display: flex;
+    justify-content: center;
+}
+
+.curgametable {
+    font-family:arial, sans-serif;
+    border-collapse:collapse;
+    width:350px;
+    border: 3px solid black;
+}
+
+th {
+    background-color:white;
+    color:black;
+    padding: 8px;
+}
+
+td {
+    background-color:#525252;
+    color:white;
+    padding: 8px;
+    justify-content: center;
+}
+
+td > p {
+  margin:0;
+  display:flex;
+  justify-content: center;
+}
+
+#toplogo {
+    margin-top: 10%;
+}
+
+/** menu **/
+
+.menu {
+  margin-top:50px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Buttons */
+
+#buttons {
+  margin-left:50px;
+  margin-right:50px;
+  width: 100px;
+}
+
+.btnactive {
+  background-color: black;
+  color: white;
+}
+
+.btnlock {
+  background-color: rgb(133, 133, 133);
+  color: black;
+  cursor: no-drop;
+}
+
+
+/** Gamble table **/
+
+.Table  {
+    display:flex;
+     flex-direction:column;
+    justify-content:center;
+     background-color:black;
+     margin-top: 50px;
+     margin-bottom: 50px;
+   }
+   
+   .row {
+     height:50px;
+     width:100%;
+     display:flex;
+     justify-content:center;
+     flex-wrap:wrap;
+     flex-direction:row;
+     align-items:stretch;
+     align-content:center;
+     margin:0px;
+   }
+   
+   #row1 {
+     border-top:1px solid white;
+     border-left:1px solid white;
+     border-right:1px solid white;
+   }
+
+   #row2 {
+    border-left:1px solid white;
+    border-right:1px solid white;
+   }
+
+   #row3 {
+     border-bottom:1px solid white;
+     border-left:1px solid white;
+     border-right:1px solid white;
+   }
+   
+   #case {
+     height:50px;
+     width:50px;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     font-size:24px;
+   }
+
+   #case:hover {
+     background-color: white;
+     color:black;
+     cursor:pointer;
+     outline: 1px solid black;
+     outline-offset: -2px;
+   }
+   
+   .red {
+     background-color:red;
+     color:black;
+   }
+   
+   .black {
+     background-color:black;
+     color:white;
+   }
+
+   #dot {
+    height: 50px;
+    width: 50px;
+    display:flex;
+    position:absolute;
+    z-index:9;
+    cursor:move;
+  }
+
+  /* sidebars */
+
+  #gamb {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .gambtype {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding-left:25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    transition: background-color 0.25s;
+  }
+
+  .gambtype:hover{
+    cursor:pointer;
+  }
+
+  .gambtype:active {
+    background-color: white;
+    color: black
+  }
+  
+  /** Gambling zone **/
+
+  #token {
+    position:absolute;
+    z-index:10;
+  }
+  
+  .gamblingtable {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    width: 50%;
+    height: 70px;
+  }
+
+  .fitoken {
+    width:60px;
+    height:60px;
+    display: flex;
+    transition: margin-top 0.5s;
+  }
+
+  .fitoken:hover {
+    cursor: pointer;
+  }
+
+  .fitoken:active {
+    margin-top:2.5px;
+  }
+
+/* Roulette svg */
+
+  .svgrlet {
+    display: flex;
+    transition: none;
+    width: 300px !important;
+    height: 300px !important;
+    margin-top:50px;
+    animation-name: rotatelet;
+    animation-duration:30s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotatelet {
+    0% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(2160deg);
+    }
+    100% {
+      transform: none;
+    }
+  }
+
+  .rletsvg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .winop {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    left:46.7%;
+    right:46.7%;
+    top:583px;
+  }
+
+  /* form css */
+
+  .p > label {
+    display: flex !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
