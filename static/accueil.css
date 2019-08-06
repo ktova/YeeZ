@@ -1,0 +1,67 @@
+body {
+width:100%;
+background-color:black;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+overflow: hidden;
+display: flex;
+justify-content: center;
+}
+
+#Alterlogo {
+  width:500px;
+  height:200px;
+  background-image: url(/static/js/mask.gif);
+}
+
+.flexcen {
+    display: flex;
+    justify-content: center;
+}
+
+#toplogo {
+  margin: 10%;
+}
+
+form {
+  width:300px;
+  height:300px;
+  padding: 50px;
+  background-color:rgba(255, 255, 255, 0.9);
+  border:1px dotted black;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+label {
+display: flex;
+justify-content: center;
+width: 300px;
+}
+
+.formfield {
+justify-content: center;
+display: flex;
+width: 300px;
+border-radius: 2px;
+height: 25px;
+border: 1px solid rgb(145, 145, 145)
+}
+
+.submitbtn {
+  margin-top:20px;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: 1px dotted black;
+  margin-left: 100px;
+}

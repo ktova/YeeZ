@@ -12,6 +12,12 @@ def index(request):
 def login(request):
     return render(request, "mysite/loginpage.html", {})
 
+def endgame(request):
+    return render(request, "mysite/endpage.html", {})
+
+def accueil(request):
+    return render(request, "mysite/Basepage.html", {})
+
 def getform(request):
     if request.method == "POST":
         form = userForm(request.POST)
