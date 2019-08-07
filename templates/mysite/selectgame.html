@@ -1,0 +1,57 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <title>Yeezus Casino</title>
+    <meta charset="utf-8" />
+    <link rel='stylesheet' href="/static/accueil.css" type='text/css'/>
+    <meta name="viewport" content = "with=device-width, initial-scale=1.0">
+</head>
+
+<body class="body">
+
+{% block content %}
+
+<div id="wraplogo">
+<div id="Alterlogo">
+    <svg id="yeezhome" width="660" height="220">  
+ <defs>  
+   <mask id="mask-1" x="0" y="0" width="100" height="100">  
+     <text x="70" y="140" font-family="Coolvetica" font-weight="bold" letter-spacing="60" font-size="8em" fill="#999">YEEZUS</text>  
+   </mask>  
+ </defs>
+</svg>
+</div>
+</div>
+</form>
+
+<div id="wrapper">
+  <div id="colgame" class="col1" onclick="window.location.href='http://127.0.0.1:8000/roulette/home'">
+  <div id="colcontent"><h1 style="text-shadow: 1px 1px 1px black;color:white;">W.I.P</h1></div>
+  <div id="coltop"><h3>American Roulette</h3></div>
+  </div>
+
+  <div id="colgame" class="col2">
+  <div id="colcontent"><h1 style="text-shadow: 1px 1px 1px black;color:rgba(255, 255, 255, 0.9);">W.I.P</h1></div>    
+  <div id="coltop"><h3>Blackjack</h3></div>
+  </div>
+
+  <div id="colgame" class="col3">
+  <div id="colcontent"><h1 style="text-shadow: 1px 1px 1px black;color:rgba(255, 255, 255, 0.75);">W.I.P</h1></div>   
+  <div id="coltop"><h3>Poker</h3></div>
+  </div>
+
+</div>
+
+{% endblock %}
+<footer>
+<h5> ©Yeezus - tevus@yeezus.ch </h5>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/yeezus.js' %}"></script>
+</body>
+</html>   

@@ -2,6 +2,7 @@ function showroulette(){
   $("#RouletteTable").toggle(200);
 }
 
+
 function showMenu(){
   $(".menhider").show(0);
   $(".logform").hide(0);
@@ -52,4 +53,13 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+function hudhider(){
+  $(".gamblingtable").toggle(1000)
+  $("#gamb, #gamb2").toggle(1000)
+}
+
+function hudtimer(){
+  setInterval(hudhider,30000)
 }

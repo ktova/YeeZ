@@ -20,7 +20,7 @@
 <div>
     {% block content %}
     <div id="toplogo" class="flexcen">
-    <img src="/static/yeezlog.png">
+    <img src="/static/js/yeezlog.png">
     </div>
 
     <!-- Starting form -->
@@ -29,7 +29,7 @@
         <form method="POST" class="logform">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <input class="submitbtn" type="submit" value="Enter" onclick="window.location.href='http://127.0.0.1:8000/roulette/'"/>
+                <input class="submitbtn" type="submit" value="Enter" onclick="window.location.href='http://127.0.0.1:8000/roulette/home'"/>
          </form>
     </div>
 </div>    

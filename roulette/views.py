@@ -16,7 +16,7 @@ def endgame(request):
     return render(request, "mysite/endpage.html", {})
 
 def accueil(request):
-    return render(request, "mysite/Basepage.html", {})
+    return render(request, "mysite/selectgame.html", {})
 
 def getform(request):
     if request.method == "POST":

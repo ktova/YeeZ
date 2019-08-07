@@ -2,66 +2,108 @@ body {
 width:100%;
 background-color:black;
 background-size: 100% 100%;
-background-repeat: no-repeat;
 overflow: hidden;
-display: flex;
 justify-content: center;
 }
 
 #Alterlogo {
-  width:500px;
-  height:200px;
+  display: block;
+  margin-top:10%;
+  margin-left:0;
+  margin-right:0;
+  width: 465px;
+  height: 220px;
   background-image: url(/static/js/mask.gif);
+  mask:url(/static/js/yeezu.svg);
+  background-repeat: no-repeat;
 }
 
-.flexcen {
-    display: flex;
-    justify-content: center;
-}
-
-#toplogo {
-  margin: 10%;
-}
-
-form {
-  width:300px;
-  height:300px;
-  padding: 50px;
-  background-color:rgba(255, 255, 255, 0.9);
-  border:1px dotted black;
-  display:flex;
-  flex-wrap: wrap;
+#wraplogo {
+  width: 100%;
+  display: flex;
   justify-content: center;
-  flex-direction: column;
 }
 
-p {
+#wrapper {
+  margin-top: 100px;
+  display:flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#colgame {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+  height:500px;
+  width:250px;
+  border: 2px dotted white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  transition: width 1s,height 1s;
 }
 
-label {
-display: flex;
-justify-content: center;
-width: 300px;
+#colgame:hover {
+  height: 600px;
+  width:300px;
 }
 
-.formfield {
-justify-content: center;
-display: flex;
-width: 300px;
-border-radius: 2px;
-height: 25px;
-border: 1px solid rgb(145, 145, 145)
+#colgame:hover > #coltop {
+  width: 300px;
 }
 
-.submitbtn {
-  margin-top:20px;
-  width: 100px;
-  height: 30px;
-  background-color: white;
-  border: 1px dotted black;
-  margin-left: 100px;
+#coltop {
+  width:252px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:50px;
+  transition: width 1s;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(255, 255, 255, 0.705);
+}
+
+#colcontent {
+  width: 252px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 452px;
+}
+
+.col1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  background-image: url(/static/js/rouletteban.png);
+}
+
+.col2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-image: url(/static/js/bjack.png);
+}
+
+.col3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-image: url(/static/js/poker.png);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+h5 {
+  color:white;
+  margin-bottom: 0;
+  margin-top: 100px;
+  bottom:0;
 }

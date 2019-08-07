@@ -18,26 +18,14 @@
     </style>
 </head>
 
-<body class="body">
+<body class="body" onload="hudtimer()">
 
 <!-- Logo -->
 <div>
     {% block content %}
-    <div id="toplogo" class="flexcen">
-    <img src="/static/yeezlog.png">
+    <div id="toplogo" class="flexcen" onclick="window.location.href='http://127.0.0.1:8000/roulette/'">
+    <img src="/static/js/yeezlog.png">
     </div>
-</div>
-
-
-<!-- Menu -->
-
-<!-- Menu hider -->
-<div class="flexcen">
-<div class="menu">
-    <button id="buttons" class="btnactive" onclick="showroulette()"> <h3>Roulette</h3> </button>
-    <button id="buttons" class="btnlock" disabled> <h3>Blackjack</h3> </button>
-    <button id="buttons" class="btnlock" disabled> <h3>Poker</h3> </button>
-</div>
 </div>
  
 <!-- Roulette svg -->
@@ -398,7 +386,7 @@
           </div>
 
 <!-- Special gambles -->
-       <div id="gamb" class="flexcen">
+       <div id="gamb2" class="flexcen">
             <div class="gambtype">Half</div>
             <div class="gambtype">Color</div>
             <div class="gambtype">Colum</div>
