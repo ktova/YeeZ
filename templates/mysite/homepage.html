@@ -9,13 +9,7 @@
     <meta charset="utf-8" />
     <link rel='stylesheet' href="/static/style.css" type='text/css'/>
     <meta name="viewport" content = "with=device-width, initial-scale=1.0">
-    <style type="text/css">
-    html,
-    body {
-        height: 100%;
-        overflow:hidden;
-    }
-    </style>
+
 </head>
 
 <body class="body" onload="hudtimer()">
@@ -399,7 +393,7 @@
     <div class="flexcen">
 <!-- Gambling table -->
         <div class="gamblingtable">
-            <div id="jeton"><?xml version="1.0" encoding="UTF-8"?>
+            <div id="jeton" class="jeton1"><?xml version="1.0" encoding="UTF-8"?>
                 <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>5 token</title>
                     <defs>
@@ -420,7 +414,7 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton"><?xml version="1.0" encoding="UTF-8"?>
+            <div id="jeton" class="jeton2"><?xml version="1.0" encoding="UTF-8"?>
                 <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>10 token</title>
                     <defs>
@@ -441,7 +435,7 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton"><?xml version="1.0" encoding="UTF-8"?>
+            <div id="jeton" class="jeton3"><?xml version="1.0" encoding="UTF-8"?>
                 <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>20 token</title>
                     <defs>
@@ -462,7 +456,7 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton"><?xml version="1.0" encoding="UTF-8"?>
+            <div id="jeton" class="jeton4"><?xml version="1.0" encoding="UTF-8"?>
                 <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>50tk</title>
                     <defs>
@@ -483,7 +477,7 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton"><?xml version="1.0" encoding="UTF-8"?>
+            <div id="jeton" class="jeton5"><?xml version="1.0" encoding="UTF-8"?>
                 <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>100tk</title>
                     <defs>
@@ -504,7 +498,7 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton"><?xml version="1.0" encoding="UTF-8"?>
+            <div id="jeton" class="jeton6"><?xml version="1.0" encoding="UTF-8"?>
                 <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>200tk</title>
                     <defs>
@@ -553,6 +547,7 @@
     {% endblock %}
 
     {% block js %}
+    <script src="bower_components/rivets/dist/rivets.bundled.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="{% static 'js/yeezus.js' %}"></script>
     {% endblock %}

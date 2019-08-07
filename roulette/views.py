@@ -18,6 +18,10 @@ def endgame(request):
 def accueil(request):
     return render(request, "mysite/selectgame.html", {})
 
+def stats(request):
+    return render(request, "mysite/stats.html", {})
+
+
 def getform(request):
     if request.method == "POST":
         form = userForm(request.POST)

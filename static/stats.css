@@ -1,0 +1,128 @@
+body {
+    width:100%;
+    height:1400px;
+    background-color: black;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+    
+.flexcen {
+    display: flex;
+    justify-content: center;
+}
+
+.statitle > p {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    font-family: cursive;
+}
+
+.statitle {
+    position: absolute;
+    top: 100px;
+    left: 45%;
+}
+
+.rletsvg {
+    display: flex;
+    position: relative;
+    width: 300px !important;
+    height: 300px !important;
+}
+
+svg {
+    height: 300px !important;
+}
+
+
+#Maincontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    width: 85%;
+    height: 70%;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5%;
+    background-color: grey;
+}
+
+#header > h2 {
+    margin: 0;
+}
+
+.generalstats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#rletvue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65%;
+    background-color:skyblue;
+}
+
+#specialvalues {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 30%;
+}
+
+#specialvue {
+    height: 100%;
+    width: 33.3333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spv1 {
+    background-color: wheat;
+}
+
+.spv2 {
+    background-color: rgb(111, 216, 176);
+}
+
+.spv3 {
+    background-color: rgb(234, 179, 245);
+}
+
+.spv4 {
+    background-color: rgb(245, 179, 179);
+}
