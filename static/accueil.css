@@ -13,8 +13,8 @@ justify-content: center;
   margin-right:0;
   width: 465px;
   height: 220px;
-  background-image: url(/static/js/mask.gif);
-  mask:url(/static/js/yeezu.svg);
+  background-image: url(/static/images/mask.gif);
+  mask:url(/static/images/yeezu.svg);
   background-repeat: no-repeat;
 }
 
@@ -77,7 +77,7 @@ justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
   cursor: pointer;
-  background-image: url(/static/js/rouletteban.png);
+  background-image: url(/static/images/rouletteban.png);
 }
 
 .col2 {
@@ -85,7 +85,7 @@ justify-content: center;
   background-size: cover;
   opacity: 0.5;
   cursor: not-allowed;
-  background-image: url(/static/js/bjack.png);
+  background-image: url(/static/images/bjack.png);
 }
 
 .col3 {
@@ -93,7 +93,7 @@ justify-content: center;
   background-size: cover;
   opacity: 0.5;
   cursor: not-allowed;
-  background-image: url(/static/js/poker.png);
+  background-image: url(/static/images/poker.png);
 }
 
 footer {

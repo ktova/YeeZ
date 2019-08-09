@@ -1,14 +1,13 @@
 body {
 width:100%;
 height:1400px;
-background-image: url(/static/js/bgsign.jpg);
+background-image: url(/static/images/bgsign.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 overflow-x: hidden;
 }
 
-/* toggled content */
-
+/* tokens */
 
 
 /**/
@@ -88,10 +87,17 @@ td > p {
     display:flex;
      flex-direction:column;
     justify-content:center;
-     background-color:black;
      margin-top: 50px;
-     margin-bottom: 50px;
+     margin-bottom: 20px;
+     width: 750px;
+     height: 250px;
    }
+
+  .septable {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
    
    .row {
      height:50px;
@@ -105,22 +111,66 @@ td > p {
      margin:0px;
    }
    
+.maintableright{
+  max-height: 152px !important;
+  max-width: 51px !important;
+}
+
+.maintableleft{
+  max-height: 152px !important;
+  max-width: 51px !important;
+}
+
+#zerozone {
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#toto11 {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+
+#toto12 {
+  border-right: 1px solid white;
+}
+
+#toto13 {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.maintablecenter {
+  max-width: 600px;
+  max-height: 150px;
+}
+
+.totocol {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
    #row1 {
      border-top:1px solid white;
-     border-left:1px solid white;
-     border-right:1px solid white;
    }
 
-   #row2 {
+   .specrow1 {
+    height: 50px;
+    max-width: 602px;
     border-left:1px solid white;
     border-right:1px solid white;
-   }
+  }
 
-   #row3 {
-     border-bottom:1px solid white;
-     border-left:1px solid white;
-     border-right:1px solid white;
-   }
+  .specrow2 {
+    height: 50px;
+    border-bottom:1px solid white;
+    border-left:1px solid white;
+    border-right:1px solid white;
+  }
    
    #case {
      height:50px;
@@ -131,8 +181,8 @@ td > p {
      font-size:24px;
    }
 
-   #case:hover {
-     background-color: white;
+   .case:hover {
+     background-color: rgba(255, 255, 255, 0.5);
      color:black;
      cursor:pointer;
      outline: 1px solid black;
@@ -140,12 +190,16 @@ td > p {
    }
    
    .red {
-     background-color:red;
      color:black;
+     background-color: red;
    }
-   
+
+   .green {
+     background-color: green;
+   }
+
    .black {
-     background-color:black;
+     background-color: black;
      color:white;
    }
 
@@ -160,22 +214,29 @@ td > p {
 
   /* sidebars */
 
-  #gamb {
+  #Tablewrapper {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 150px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .subtable1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-height: 150px;
   }
 
   #gamb2 {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 150px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    flex-direction: row;
+    height: 25;
+    margin-bottom: 100px;
   }
 
   .gambtype {
@@ -197,14 +258,35 @@ td > p {
   }
 
   .gambtype:hover{
+    background-color: white;
+    color: black;
     cursor:pointer;
   }
 
   .gambtype:active {
-    background-color: white;
-    color: black
+    background-color: black;
+    color: white;
   }
-  
+   /* highlight */
+
+  .highlight1 {
+    background-color: rgba(0, 153, 255, 0.76);
+    outline: 1px solid black;
+    outline-offset: -2px;
+      }
+
+  .highlight2 {
+    background-color: rgba(255, 60, 0, 0.76);
+    outline: 1px solid rgb(255, 255, 255);
+    outline-offset: -2px;
+  }
+
+  .highlight3 {
+    background-color: rgba(255, 217, 0, 0.76);
+    outline: 1px solid rgb(121, 121, 121);
+    outline-offset: -2px;
+  }
+
   /** Gambling zone **/
 
   #token {
@@ -223,7 +305,42 @@ td > p {
     height: 70px;
   }
 
+  .jetonk {
+    width: 60px;
+    height: 60px;
+    display: flex;
+  }
+
+  #jeton1 {
+    position: absolute;
+  }
+
+  #jeton2 {
+    position: absolute;
+  }
+
+  #jeton3 {
+    position: absolute;
+  }
+
+  #jeton4 {
+    position: absolute;
+  }
+
+  #jeton5 {
+    position: absolute;
+  }
+
+  #jeton6 {
+    position: absolute;
+  }
+
+  #cloneton {
+    position: absolute;
+  }
+
   .fitoken {
+    cursor: move;
     width:60px;
     height:60px;
     display: flex;
@@ -294,4 +411,26 @@ td > p {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+
+  .statscontainer {
+    display:flex;
+    justify-content:center;
+    position:absolute;
+    align-items: center;
+    top: 30px;
+    left: 30px;
+    background: black;
+    border:1px dotted white;
+    width: 70px;
+    height: 60px;
+    transition: background-color 1s;
+  }
+
+  .statscontainer:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .statscontainer > h2 {
+    color: white;
   }

@@ -14,11 +14,15 @@
 
 <body class="body" onload="hudtimer()">
 
+<div class="statscontainer" onclick="window.location.href='http://127.0.0.1:8000/roulette/stats'">
+  <h2> Stats </h2>
+</div>
+
 <!-- Logo -->
 <div>
     {% block content %}
     <div id="toplogo" class="flexcen" onclick="window.location.href='http://127.0.0.1:8000/roulette/'">
-    <img src="/static/js/yeezlog.png">
+    <img src="/static/images/yeezlog.png">
     </div>
 </div>
  
@@ -318,74 +322,111 @@
 
 <!-- Roulette Gameboard -->
 <div id="RouletteTable">
-  <div class="flexcen">
+  <div id="Tablewrapper" class="flexcen">
 <!-- Gambletypes -->
 
-<!-- Numbers gambler -->
-        <div id="gamb" class="flexcen">
-          <div class="gambtype">Solo</div>
-          <div class="gambtype">Duo</div>
-          <div class="gambtype">Trio</div>
-          <div class="gambtype">Square</div>
-          <div class="gambtype">Six</div>
-        </div>
 
 <!-- Table -->
-        <div class="Table">
-            <div class="row" id="row1">
-              <div id="case" class="red c1">1</div>
-              <div id="case" class="black c4">4</div>
-              <div id="case" class="red c7">7</div>
-              <div id="case" class="black c10">10</div>
-              <div id="case" class="red c13">13</div>
-              <div id="case" class="black c16">16</div>
-              <div id="case" class="red c19">19</div>
-              <div id="case" class="black c22">22</div>
-              <div id="case" class="red c25">25</div>
-              <div id="case" class="black c28">28</div>
-              <div id="case" class="red c31">31</div>
-              <div id="case" class="black c34">34</div>
-            </div>
-            
-            <div class="row" id="row2">
-              <div id="case" class="black c2">2</div>
-              <div id="case" class="red c5">5</div>
-              <div id="case" class="black c8">8</div>
-              <div id="case" class="red c11">11</div>
-              <div id="case" class="black c14">14</div>
-              <div id="case" class="red c17">17</div>
-              <div id="case" class="black c20">20</div>
-              <div id="case" class="red c23">23</div>
-              <div id="case" class="black c26">26</div>
-              <div id="case" class="red c29">29</div>
-              <div id="case" class="black c32">32</div>
-              <div id="case" class="red c35">35</div>    
-            </div>
-            
-            <div class="row" id="row3">
-              <div id="case" class="red c3">3</div>
-              <div id="case" class="black c6">6</div>
-              <div id="case" class="red c9">9</div>
-              <div id="case" class="black c12">12</div>
-              <div id="case" class="red c15">15</div>
-              <div id="case" class="black c18">18</div>
-              <div id="case" class="red c21">21</div>
-              <div id="case" class="black c24">24</div>
-              <div id="case" class="red c27">27</div>
-              <div id="case" class="black c30">30</div>    
-              <div id="case" class="red c33">33</div>
-              <div id="case" class="black c36">36</div>     
-            </div>  
-            
-          </div>
+<div class="septable">
+<div class="Table">
 
+<!-- subtable rows -->
+
+<div class="subtable1" id="subtable">
+    <div class="maintableleft">
+        <div class="zerocol">
+                <canvas id="zerozone" class="zero case green specialeft" width="50" height="150"></canvas>
+        </div>
+    </div>
+
+    <div class="maintablecenter">
+
+        <div class="row" id="row1">
+                <canvas id="c1" class="red case odd half1 ro1 doz1" width="50" height="50"></canvas>
+                <canvas id="c4" class="black case even half1 ro1 doz1" width="50" height="50"></canvas>
+                <canvas id="c7" class="red case odd half1 ro1 doz1" width="50" height="50"></canvas>
+                <canvas id="c10" class="black case even half1 ro1 doz1" width="50" height="50"></canvas>
+                <canvas id="c13" class="red case odd half1 ro1 doz2" width="50" height="50"></canvas>
+                <canvas id="c16" class="black case even half1 ro1 doz2" width="50" height="50"></canvas>
+                <canvas id="c19" class="red case odd half2 ro1 doz2" width="50" height="50"></canvas>
+                <canvas id="c22" class="black case even half2 ro1 doz2" width="50" height="50"></canvas>
+                <canvas id="c25" class="red case odd half2 ro1 doz3" width="50" height="50"></canvas>
+                <canvas id="c28" class="black case even half2 ro1 doz3" width="50" height="50"></canvas>
+                <canvas id="c31" class="red case odd half2 ro1 doz3" width="50" height="50"></canvas>
+                <canvas id="c34" class="black case even half2 ro1 doz3" width="50" height="50"></canvas>
+        </div>
+    
+        <div class="row" id="row2">
+                <canvas id="c2" class="black case even half1 ro2 doz1" width="50" height="50"></canvas>
+                <canvas id="c5" class="red case odd half1 ro2 doz1" width="50" height="50"></canvas>
+                <canvas id="c8" class="black case even half1 ro2 doz1" width="50" height="50"></canvas>
+                <canvas id="c11" class="red case odd half1 ro2 doz1" width="50" height="50"></canvas>
+                <canvas id="c14" class="black case even half1 ro2 doz2" width="50" height="50"></canvas>
+                <canvas id="c17" class="red case odd half1 ro2 doz2" width="50" height="50"></canvas>
+                <canvas id="c20" class="black case even half2 ro2 doz2" width="50" height="50"></canvas>
+                <canvas id="c23" class="red case odd half2 ro2 doz2" width="50" height="50"></canvas>
+                <canvas id="c26" class="black case even half2 ro2 doz3" width="50" height="50"></canvas>
+                <canvas id="c29" class="red case odd half2 ro2 doz3" width="50" height="50"></canvas>
+                <canvas id="c32" class="black case even half2 ro2 doz3" width="50" height="50"></canvas>
+                <canvas id="c35" class="red case odd half2 ro2 doz3" width="50" height="50"></canvas>
+        </div>
+    
+        <div class="row" id="row3">
+                <canvas id="c3" class="red case odd half1 ro3 doz1" width="50" height="50"></canvas>
+                <canvas id="c6" class="black case even half1 ro3 doz1" width="50" height="50"></canvas>
+                <canvas id="c9" class="red case odd half1 ro3 doz1" width="50" height="50"></canvas>
+                <canvas id="c12" class="black case even half1 ro3 doz1" width="50" height="50"></canvas>
+                <canvas id="c15" class="red case odd half1 ro3 doz2" width="50" height="50"></canvas>
+                <canvas id="c18" class="black case even half1 ro3 doz2" width="50" height="50"></canvas>
+                <canvas id="c21" class="red case odd half2 ro3 doz2" width="50" height="50"></canvas>
+                <canvas id="c24" class="black case even half2 ro3 doz2" width="50" height="50"></canvas>
+                <canvas id="c27" class="red case odd half2 ro3 doz3" width="50" height="50"></canvas>
+                <canvas id="c30" class="black case even half2 ro3 doz3" width="50" height="50"></canvas>
+                <canvas id="c33" class="red case odd half2 ro3 doz3" width="50" height="50"></canvas>
+                <canvas id="c36" class="black case even half2 ro3 doz3" width="50" height="50"></canvas>
+        </div>
+    </div>
+
+    <div class="maintableright">
+        <div class="totocol">
+            <canvas id="toto11" class="specialright black" width="50" height="50"></canvas>
+            <canvas id="toto12" class="specialright black" width="50" height="50"></canvas>
+            <canvas id="toto13" class="specialright black" width="50" height="50"></canvas>
+        </div>
+    </div>
+
+ </div>       
+ <!-- subtable columns -->
+    
+ <div class="subtable2" id="subtable">
+        <div class="row" id="row4">
+        <div class="specrow1">
+            <canvas id="firdo" class="case black specdoz1" width="200" height="50"></canvas>
+            <canvas id="secdo" class="case black specdoz2" width="200" height="50"></canvas>
+            <canvas id="tirdo" class="case black specdoz3" width="200" height="50"></canvas>
+        </div>
+        </div>
+
+        <div class="row" id="row5">
+            <div class="specrow2">
+                <canvas id="c0" class="case green zero" width="601" height="50"></canvas>
+            </div>
+        </div>
+    
+ </div>
+
+ </div>
+ </div>
+</div>
+</div>
 <!-- Special gambles -->
+    <div>
        <div id="gamb2" class="flexcen">
-            <div class="gambtype">Half</div>
-            <div class="gambtype">Color</div>
-            <div class="gambtype">Colum</div>
-            <div class="gambtype">Dozen</div>
-            <div class="gambtype">Od/ev</div>
+            <div class="gambtype" onclick="half()">Half</div>
+            <div class="gambtype" onclick="colour()">Color</div>
+            <div class="gambtype" onclick="rowz()">Row</div>
+            <div class="gambtype" onclick="dozens()">Dozen</div>
+            <div class="gambtype" onclick="odev()">Odd/even</div>
        </div>
 
     </div>
@@ -393,8 +434,10 @@
     <div class="flexcen">
 <!-- Gambling table -->
         <div class="gamblingtable">
-            <div id="jeton" class="jeton1"><?xml version="1.0" encoding="UTF-8"?>
-                <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            
+            <div class="jetonk">
+            <div id="jeton1" class="jeton1" onclick="duplicate1()"><?xml version="1.0" encoding="UTF-8"?>
+                <svg class="fitoken" id="ftoken1" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>5 token</title>
                     <defs>
                         <text id="5tk" font-family="GothamBlack, Gotham Black" font-size="15" font-weight="700" fill="#FFFFFF">
@@ -414,8 +457,11 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton" class="jeton2"><?xml version="1.0" encoding="UTF-8"?>
-                <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            </div>
+
+            <div class="jetonk">
+            <div id="jeton2" class="jeton2" onclick="duplicate2()"><?xml version="1.0" encoding="UTF-8"?>
+                <svg class="fitoken" id="ftoken2" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>10 token</title>
                     <defs>
                         <text id="10tk" font-family="GothamBlack, Gotham Black" font-size="15" font-weight="700" fill="#FFFFFF">
@@ -435,8 +481,11 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton" class="jeton3"><?xml version="1.0" encoding="UTF-8"?>
-                <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            </div>
+
+            <div class="jetonk">    
+            <div id="jeton3" class="jeton3" onclick="duplicate3()"><?xml version="1.0" encoding="UTF-8"?>
+                <svg class="fitoken" id="ftoken3" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>20 token</title>
                     <defs>
                         <text id="20tk" font-family="GothamBlack, Gotham Black" font-size="15" font-weight="700" fill="#FFFFFF">
@@ -456,8 +505,11 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton" class="jeton4"><?xml version="1.0" encoding="UTF-8"?>
-                <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            </div>
+
+            <div class="jetonk">
+            <div id="jeton4" class="jeton4" onclick="duplicate4()"><?xml version="1.0" encoding="UTF-8"?>
+                <svg class="fitoken" id="ftoken4" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>50tk</title>
                     <defs>
                         <text id="50tk" font-family="GothamBlack, Gotham Black" font-size="15" font-weight="700" fill="#FFFFFF">
@@ -477,8 +529,11 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton" class="jeton5"><?xml version="1.0" encoding="UTF-8"?>
-                <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            </div>
+
+            <div class="jetonk">
+            <div id="jeton5" class="jeton5" onclick="duplicate5()"><?xml version="1.0" encoding="UTF-8"?>
+                <svg class="fitoken" id="ftoken5" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>100tk</title>
                     <defs>
                         <text id="100tk" font-family="GothamBlack, Gotham Black" font-size="15" font-weight="700" fill="#FFFFFF">
@@ -498,8 +553,11 @@
                         </g>
                     </g>
                 </svg></div>
-            <div id="jeton" class="jeton6"><?xml version="1.0" encoding="UTF-8"?>
-                <svg class="fitoken" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            </div>
+
+            <div class="jetonk">
+            <div id="jeton6" class="jeton6" onclick="duplicate6()"><?xml version="1.0" encoding="UTF-8"?>
+                <svg class="fitoken" id="ftoken6" width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>200tk</title>
                     <defs>
                         <text id="200tk" font-family="GothamBlack, Gotham Black" font-size="15" font-weight="700" fill="#FFFFFF">
@@ -519,6 +577,8 @@
                         </g>
                     </g>
                 </svg></div>
+            </div>
+
         </div>
     </div>
             
@@ -547,9 +607,10 @@
     {% endblock %}
 
     {% block js %}
-    <script src="bower_components/rivets/dist/rivets.bundled.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="{% static 'js/yeezus.js' %}"></script>
+    <script src="{% static 'js/engine/yeezus.js' %}"></script>
+    <script src="{% static 'js/engine/canvas.js' %}"></script>
+    <script src="{% static 'js/engine/helpers.js' %}"></script>
     {% endblock %}
 </body>
 </html>
