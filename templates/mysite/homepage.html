@@ -328,6 +328,7 @@
 
 <!-- Table -->
 <div class="septable">
+<div class="bgtable">
 <div class="Table">
 
 <!-- subtable rows -->
@@ -389,9 +390,9 @@
 
     <div class="maintableright">
         <div class="totocol">
-            <canvas id="toto11" class="specialright black" width="50" height="50"></canvas>
-            <canvas id="toto12" class="specialright black" width="50" height="50"></canvas>
-            <canvas id="toto13" class="specialright black" width="50" height="50"></canvas>
+            <canvas id="toto11" class="specialright blankcolor" width="50" height="50"></canvas>
+            <canvas id="toto12" class="specialright blankcolor" width="50" height="50"></canvas>
+            <canvas id="toto13" class="specialright blankcolor" width="50" height="50"></canvas>
         </div>
     </div>
 
@@ -401,35 +402,23 @@
  <div class="subtable2" id="subtable">
         <div class="row" id="row4">
         <div class="specrow1">
-            <canvas id="firdo" class="case black specdoz1" width="200" height="50"></canvas>
-            <canvas id="secdo" class="case black specdoz2" width="200" height="50"></canvas>
-            <canvas id="tirdo" class="case black specdoz3" width="200" height="50"></canvas>
+                <canvas id="firdo" class="case blankcolor specdoz1" width="200" height="50">
+                </canvas><canvas id="secdo" class="case blankcolor specdoz2" width="200" height="50">
+                </canvas><canvas id="tirdo" class="case blankcolor specdoz3" width="200" height="50"></canvas>              
         </div>
         </div>
 
         <div class="row" id="row5">
             <div class="specrow2">
-                <canvas id="c0" class="case green zero" width="601" height="50"></canvas>
+            <canvas id="spfirstei" class="case blankcolor spec" width="100" height="50"></canvas><canvas id="speven" class="case blankcolor spec" width="100" height="50"></canvas><canvas id="spred" class="case blankcolor spec" width="100" height="50"></canvas><canvas id="spblack" class="case blankcolor spec" width="100" height="50"></canvas><canvas id="spodd" class="case blankcolor spec" width="100" height="50"></canvas><canvas id="splastei" class="case blankcolor spec" width="100" height="50"></canvas>
             </div>
         </div>
-    
  </div>
 
  </div>
  </div>
 </div>
 </div>
-<!-- Special gambles -->
-    <div>
-       <div id="gamb2" class="flexcen">
-            <div class="gambtype" onclick="half()">Half</div>
-            <div class="gambtype" onclick="colour()">Color</div>
-            <div class="gambtype" onclick="rowz()">Row</div>
-            <div class="gambtype" onclick="dozens()">Dozen</div>
-            <div class="gambtype" onclick="odev()">Odd/even</div>
-       </div>
-
-    </div>
 
     <div class="flexcen">
 <!-- Gambling table -->
@@ -602,6 +591,11 @@
                 </table>
                 </div>   
         </div>
+</div>
+
+<div class="colorvas">
+        <img src="/static/images/yeezlog.png">
+        <img src="/static/images/yeezlog.png">
 </div>
 
     {% endblock %}

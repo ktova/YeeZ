@@ -44,6 +44,12 @@ var toto3 = document.getElementById('toto13').getContext('2d');
 var firdo = document.getElementById('firdo').getContext('2d');
 var secdo = document.getElementById('secdo').getContext('2d');
 var tirdo = document.getElementById('tirdo').getContext('2d');
+var firstei = document.getElementById('spfirstei').getContext('2d');
+var lastei = document.getElementById('splastei').getContext('2d');
+var speven = document.getElementById('speven').getContext('2d');
+var speodd = document.getElementById('spodd').getContext('2d');
+var spered = document.getElementById('spred').getContext('2d');
+var speblack = document.getElementById('spblack').getContext('2d');
 
 
 // Black Text Canvas
@@ -217,15 +223,39 @@ toto3.fillText('2to1',13,28);
 
 firdo.font = '12px Arial';
 firdo.fillStyle = "#fff";
-firdo.fillText('1st 12',13,28);
+firdo.fillText('1st 12',82,28);
 
 secdo.font = '12px Arial';
 secdo.fillStyle = "#fff";
-secdo.fillText('2nd 12',13,28);
+secdo.fillText('2nd 12',82,28);
 
 tirdo.font = '12px Arial';
 tirdo.fillStyle = "#fff";
-tirdo.fillText('3rd 12',13,28);
+tirdo.fillText('3rd 12',82,28);
+
+firstei.font = '12px Arial';
+firstei.fillStyle = "#fff";
+firstei.fillText('1-18',38,28);
+
+lastei.font = '12px Arial';
+lastei.fillStyle = "#fff";
+lastei.fillText('19-36',38,28);
+
+speblack.font = '12px Arial';
+speblack.fillStyle = "#fff";
+speblack.fillText('Black',38,28);
+
+spered.font = '12px Arial';
+spered.fillStyle = "#fff";
+spered.fillText('Red',38,28);
+
+speodd.font = '12px Arial';
+speodd.fillStyle = "#fff";
+speodd.fillText('Odd',38,28);
+
+speven.font = '12px Arial';
+speven.fillStyle = "#fff";
+speven.fillText('Even',38,28);
 
 }draw();
 

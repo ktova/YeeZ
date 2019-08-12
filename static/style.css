@@ -121,6 +121,17 @@ td > p {
   max-width: 51px !important;
 }
 
+/* Backgroud Table */
+
+.bgtable {
+  background-image: linear-gradient(to right,rgb(2, 136, 73), rgb(0, 228, 76),rgb(2, 136, 73));
+  height:350px;
+  border: 2px solid white;
+  margin-bottom: 50px;
+}
+
+/* End Bg Gradient */
+
 #zerozone {
   border-top: 1px solid white;
   border-left: 1px solid white;
@@ -201,6 +212,11 @@ td > p {
    .black {
      background-color: black;
      color:white;
+   }
+
+   .blankcolor {
+     background-color: #52525200;
+     color: black;
    }
 
    #dot {
@@ -433,4 +449,8 @@ td > p {
 
   .statscontainer > h2 {
     color: white;
+  }
+
+  .colorvas {
+    display: none;
   }
