@@ -13,99 +13,19 @@ $(document).ready(function() {
 
 //////////////// Drag Elements //////////////
 
-dragElement(document.getElementById("jeton1"));
-dragElement(document.getElementById("jeton2"));
-dragElement(document.getElementById("jeton3"));
-dragElement(document.getElementById("jeton4"));
-dragElement(document.getElementById("jeton5"));
-dragElement(document.getElementById("jeton6"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  elmnt.onmousedown = dragMouseDown;
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+function dragtokens() {
+  $("#token5, #token10, #token20, #token50, #token100, #token200").draggable();
+}dragtokens();
 
 /////////// Clone elements /////////////////
 
-var original1 = document.getElementById('jeton1');
-var original2 = document.getElementById('jeton2');
-var original3 = document.getElementById('jeton3');
-var original4 = document.getElementById('jeton4');
-var original5 = document.getElementById('jeton5');
-var original6 = document.getElementById('jeton6');
+// Func duplicate print and drag //
 
-
-function duplicate1() {
-  var clone = original1.cloneNode(true); // "deep" clone
-  clone.id = "cloneton";
-  original1.parentNode.appendChild(clone);
-  dragElement(document.getElementById("cloneton"));
-}
-
-function duplicate2() {
-  var clone = original2.cloneNode(true); // "deep" clone
-  clone.id = "cloneton";
-  original2.parentNode.appendChild(clone);
-  dragElement(document.getElementById("cloneton"));
-}
-
-function duplicate3() {
-  var clone = original3.cloneNode(true); // "deep" clone
-  clone.id = "cloneton";
-  original3.parentNode.appendChild(clone);
-  dragElement(document.getElementById("cloneton"));
-}
-
-function duplicate4() {
-  var clone = original4.cloneNode(true); // "deep" clone
-  clone.id = "cloneton";
-  original4.parentNode.appendChild(clone);
-  dragElement(document.getElementById("cloneton"));
-}
-
-function duplicate5() {
-  var clone = original5.cloneNode(true); // "deep" clone
-  clone.id = "cloneton";
-  original5.parentNode.appendChild(clone);
-  dragElement(document.getElementById("cloneton"));
-}
-
-function duplicate6() {
-  var clone = original6.cloneNode(true); // "deep" clone
-  clone.id = "cloneton";
-  original6.parentNode.appendChild(clone);
-  dragElement(document.getElementById("cloneton"));
-}
+$(document).ready(function() { 
+    $("#resetbtn").click(function(){
+      $("#Todestroy").remove();
+    });
+  }); 
 
 ////////////////////////////////////////////
 
@@ -115,13 +35,16 @@ function hudhider(){
 }
 
 function hudtimer(){
-  setInterval(hudhider,30000)
+  setInterval(hudhider,300000)
 }
 
 /////////////////////////////////////////////////////////////////////vue.js////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+//// Timer bar ////
 
+////function startbar() {
+  
 
 ////////apex graphs/////////
 

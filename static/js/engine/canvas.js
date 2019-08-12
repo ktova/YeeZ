@@ -210,53 +210,95 @@ c0.fillText('0',18,82)
 // Special
 
 toto1.font = '12px Arial';
-toto1.fillStyle = "#fff";
+toto1.fillStyle = "#000";
 toto1.fillText('2to1',13,28);
 
 toto2.font = '12px Arial';
-toto2.fillStyle = "#fff";
+toto2.fillStyle = "#000";
 toto2.fillText('2to1',13,28);
 
 toto3.font = '12px Arial';
-toto3.fillStyle = "#fff";
+toto3.fillStyle = "#000";
 toto3.fillText('2to1',13,28);
 
-firdo.font = '12px Arial';
-firdo.fillStyle = "#fff";
-firdo.fillText('1st 12',82,28);
+firdo.font = '24px Arial';
+firdo.fillStyle = "#000";
+firdo.fillText('First 12',60,33);
 
-secdo.font = '12px Arial';
-secdo.fillStyle = "#fff";
-secdo.fillText('2nd 12',82,28);
+secdo.font = '24px Arial';
+secdo.fillStyle = "#000";
+secdo.fillText('Middle 12',48,33);
 
-tirdo.font = '12px Arial';
-tirdo.fillStyle = "#fff";
-tirdo.fillText('3rd 12',82,28);
+tirdo.font = '24px Arial';
+tirdo.fillStyle = "#000";
+tirdo.fillText('Last 12',62,33);
 
-firstei.font = '12px Arial';
-firstei.fillStyle = "#fff";
-firstei.fillText('1-18',38,28);
+firstei.font = '19px Arial';
+firstei.fillStyle = "##000";
+firstei.fillText('1-18',30,32);
 
-lastei.font = '12px Arial';
-lastei.fillStyle = "#fff";
-lastei.fillText('19-36',38,28);
+lastei.font = '19px Arial';
+lastei.fillStyle = "##000";
+lastei.fillText('19-36',25,32);
 
-speblack.font = '12px Arial';
-speblack.fillStyle = "#fff";
-speblack.fillText('Black',38,28);
+speodd.font = '19px Arial';
+speodd.fillStyle = "##000";
+speodd.fillText('Odd',30,32);
 
-spered.font = '12px Arial';
-spered.fillStyle = "#fff";
-spered.fillText('Red',38,28);
-
-speodd.font = '12px Arial';
-speodd.fillStyle = "#fff";
-speodd.fillText('Odd',38,28);
-
-speven.font = '12px Arial';
-speven.fillStyle = "#fff";
-speven.fillText('Even',38,28);
+speven.font = '19px Arial';
+speven.fillStyle = "#000";
+speven.fillText('Even',30,32);
 
 }draw();
 
+//////// add svgs to canvas for red and black gambles /////////
 
+function dawred() {
+    var redvas=document.getElementById("spred");
+    var twodredvas=redvas.getContext("2d");
+    twodredvas.drawImage(document.getElementById("gbred") ,0,0);
+}dawred();
+
+function dawblack() {
+    var blackvas=document.getElementById("spblack");
+    var twodblackvas=blackvas.getContext("2d");
+    twodblackvas.drawImage(document.getElementById("gbblack") ,0,0);
+}dawblack();
+
+/// svg for totkens ///
+
+function printoken5() {
+    var tok5=document.getElementById("token5");
+    var twodtok5=tok5.getContext("2d");
+    twodtok5.drawImage(document.getElementById("jt5") ,0,0);
+}printoken5();
+
+function printoken10() {
+    var tok10=document.getElementById("token10");
+    var twodtok10=tok10.getContext("2d");
+    twodtok10.drawImage(document.getElementById("jt10") ,0,0);
+}printoken10();
+
+function printoken20() {
+    var tok20=document.getElementById("token20");
+    var twodtok20=tok20.getContext("2d");
+    twodtok20.drawImage(document.getElementById("jt20") ,0,0);
+}printoken20();
+
+function printoken50() {
+    var tok50=document.getElementById("token50");
+    var twodtok50=tok50.getContext("2d");
+    twodtok50.drawImage(document.getElementById("jt50") ,0,0);
+}printoken50();
+
+function printoken100() {
+    var tok100=document.getElementById("token100");
+    var twodtok100=tok100.getContext("2d");
+    twodtok100.drawImage(document.getElementById("jt100") ,0,0);
+}printoken100();
+
+function printoken200() {
+    var tok200=document.getElementById("token200");
+    var twodtok200=tok200.getContext("2d");
+    twodtok200.drawImage(document.getElementById("jt200") ,0,0);
+}printoken200();

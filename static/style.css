@@ -22,6 +22,7 @@ overflow-x: hidden;
     border-collapse:collapse;
     width:350px;
     border: 3px solid black;
+    margin-top: 50px;
 }
 
 th {
@@ -62,6 +63,13 @@ td > p {
 }
 
 /* Buttons */
+
+#resetbtn {
+  background-color: black;
+  color: white;
+  border: 5px solid white;
+  padding: 15px 50px 15px 50px;
+}
 
 #buttons {
   margin-left:50px;
@@ -206,7 +214,7 @@ td > p {
    }
 
    .green {
-     background-color: green;
+     background-color: rgb(0, 87, 0);
    }
 
    .black {
@@ -322,9 +330,17 @@ td > p {
   }
 
   .jetonk {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     display: flex;
+  }
+
+  .jetonk:hover {
+    cursor: pointer;
+  }
+
+  .subjetons {
+    position: absolute;
   }
 
   #jeton1 {
