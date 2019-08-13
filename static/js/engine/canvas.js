@@ -51,6 +51,58 @@ var speodd = document.getElementById('spodd').getContext('2d');
 var spered = document.getElementById('spred').getContext('2d');
 var speblack = document.getElementById('spblack').getContext('2d');
 
+// Draw tokens
+
+function dawred() {
+    var redvas=document.getElementById("spred");
+    var twodredvas=redvas.getContext("2d");
+    twodredvas.drawImage(document.getElementById("gbred") ,0,0);
+}dawred();
+
+function dawblack() {
+    var blackvas=document.getElementById("spblack");
+    var twodblackvas=blackvas.getContext("2d");
+    twodblackvas.drawImage(document.getElementById("gbblack") ,0,0);
+}dawblack();
+
+/// svg for totkens ///
+
+function printoken5() {
+    var tok5=document.getElementById("token5");
+    var twodtok5=tok5.getContext("2d");
+    twodtok5.drawImage(document.getElementById("jt5") ,0,0);
+}printoken5();
+
+function printoken10() {
+    var tok10=document.getElementById("token10");
+    var twodtok10=tok10.getContext("2d");
+    twodtok10.drawImage(document.getElementById("jt10") ,0,0);
+}printoken10();
+
+function printoken20() {
+    var tok20=document.getElementById("token20");
+    var twodtok20=tok20.getContext("2d");
+    twodtok20.drawImage(document.getElementById("jt20") ,0,0);
+}printoken20();
+
+function printoken50() {
+    var tok50=document.getElementById("token50");
+    var twodtok50=tok50.getContext("2d");
+    twodtok50.drawImage(document.getElementById("jt50") ,0,0);
+}printoken50();
+
+function printoken100() {
+    var tok100=document.getElementById("token100");
+    var twodtok100=tok100.getContext("2d");
+    twodtok100.drawImage(document.getElementById("jt100") ,0,0);
+}printoken100();
+
+function printoken200() {
+    var tok200=document.getElementById("token200");
+    var twodtok200=tok200.getContext("2d");
+    twodtok200.drawImage(document.getElementById("jt200") ,0,0);
+}printoken200();
+
 
 // Black Text Canvas
 
@@ -253,52 +305,3 @@ speven.fillText('Even',30,32);
 
 //////// add svgs to canvas for red and black gambles /////////
 
-function dawred() {
-    var redvas=document.getElementById("spred");
-    var twodredvas=redvas.getContext("2d");
-    twodredvas.drawImage(document.getElementById("gbred") ,0,0);
-}dawred();
-
-function dawblack() {
-    var blackvas=document.getElementById("spblack");
-    var twodblackvas=blackvas.getContext("2d");
-    twodblackvas.drawImage(document.getElementById("gbblack") ,0,0);
-}dawblack();
-
-/// svg for totkens ///
-
-function printoken5() {
-    var tok5=document.getElementById("token5");
-    var twodtok5=tok5.getContext("2d");
-    twodtok5.drawImage(document.getElementById("jt5") ,0,0);
-}printoken5();
-
-function printoken10() {
-    var tok10=document.getElementById("token10");
-    var twodtok10=tok10.getContext("2d");
-    twodtok10.drawImage(document.getElementById("jt10") ,0,0);
-}printoken10();
-
-function printoken20() {
-    var tok20=document.getElementById("token20");
-    var twodtok20=tok20.getContext("2d");
-    twodtok20.drawImage(document.getElementById("jt20") ,0,0);
-}printoken20();
-
-function printoken50() {
-    var tok50=document.getElementById("token50");
-    var twodtok50=tok50.getContext("2d");
-    twodtok50.drawImage(document.getElementById("jt50") ,0,0);
-}printoken50();
-
-function printoken100() {
-    var tok100=document.getElementById("token100");
-    var twodtok100=tok100.getContext("2d");
-    twodtok100.drawImage(document.getElementById("jt100") ,0,0);
-}printoken100();
-
-function printoken200() {
-    var tok200=document.getElementById("token200");
-    var twodtok200=tok200.getContext("2d");
-    twodtok200.drawImage(document.getElementById("jt200") ,0,0);
-}printoken200();

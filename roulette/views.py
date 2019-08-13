@@ -21,6 +21,9 @@ def accueil(request):
 def stats(request):
     return render(request, "mysite/stats.html", {})
 
+def canvastesting(request):
+    return render(request, "mysite/collision.html", {})
+
 
 def getform(request):
     if request.method == "POST":

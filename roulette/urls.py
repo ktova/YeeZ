@@ -1,5 +1,5 @@
 from django.urls import path
-from . import views
+from roulette import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
@@ -8,4 +8,5 @@ urlpatterns = [
     path('end', views.endgame, name='gamend'),
     path('', views.accueil, name='accueil'),
     path('stats', views.stats, name='stats'),
+    path('test',views.canvastesting, name='cantest'),
 ]
